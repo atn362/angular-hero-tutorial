@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+
+<div>
+  <!-- <! put your HTML code to input data here > -->
+  <form id="form">
+    <div>
+      <label for="uid">UserId:</label>
+      <input type="text" id="uid" name="uid">
+    </div>
+    <div style="display: none" id="uid-error">Invalid UserID</div>
+    <div>
+      <label for="fname">First Name:</label>
+      <input type="text" id="fname" name="fname">
+    </div>
+    <div id="error-fname"></div>
+    <div>
+      <label for="lname">Last Name:</label>
+      <input type="text" id="lname" name="lname">
+    </div>
+    <div id="error-lname"></div>
+    <div>
+      <label for="birthday">Birthday:</label>
+      <input type="date" id="birthday" name="birthday">
+    </div>
+    <div id="error-birthday"></div>
+    <div id="birthday-inDays"></div>
+    <button type="submit">Accept</button>
+    <h1></h1>
+  </form>
+</div>
+<div id="loop"></div>
+
+<script>
+  // put your JavaScript code to read HTML inputs
+
+  var fname = document.getElementById('fname');
+  var lname = document.getElementById('lname');
+  var birthday = document.getElementById('birthday');
+  var form = document.getElementById('form');
+  var uidErrPara = document.getElementById('uid-error');
+  var errorFname = document.getElementById('error-fname');
+  var errorLname = document.getElementById('error-lname');
+  var errorBirthday = document.getElementById('error-birthday');
+  // and validate inputs here using if statements
+  //Validates the UserId input with the regex pattern
+  uid.addEventListener('input', (e) => {
+    var pattern = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).*.{8,9}$/
+    var currentValue = e.target.value;
+    var valid = pattern.test(currentValue);
+    if (valid) {
+      uidErrPara.style.display = 'none'
+    } else {
+      uidErrPara.style.display = 'block'
+    }
+  });
+  // write your JS functions here
+  form.addEventListener('submit', (e) => {
+    //Checks today's date, and calculates the total in years from the date input
+    let today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0' + '<br>');
+    var mm = String(today.getMonth() + 1).padStart(2, '0');
+    var yyyy = today.getFullYear();
+    today = dd + '/' + mm + '/' + yyyy;
+    let date1 = new Date(birthday.value);
+    let date2 = new Date();
+    let diff = date2.getTime() - date1.getTime();
+    let msInDay = 1000 * 3600 * 24;
+    let birthdayInYears = Math.round(diff / msInDay / 365);
+    let birthdayIsValid = (birthdayInYears < 18) === true;
+    let birthdayInDays = (birthdayInYears * 365);
+    console.log(today)
+    console.log(date1)
+    console.log(date2)
+    //if statesments used to send dates if criteria is sufficient or absent...then appropriate message is displayed
+    if (birthdayIsValid) {
+      document.getElementById('error-birthday').innerHTML = 'Your are probably not old enough to take this class!'
+    }
+    if (fname.value === '' || fname.value == null) {
+      document.getElementById('error-fname').innerHTML = 'Invalid First Name'
+    }
+    if (lname.value === '' || lname.value == null) {
+      document.getElementById('error-lname').innerHTML = 'Invalid Last Name'
+    }
+    if (birthday.value === '' || birthday.value == null) {
+      document.getElementById('error-birthday').innerHTML = 'Invalid Birthday'
+    }
+
+    function dateDiff() {
+      return birthdayInDays;
+    }
+    document.getElementById('birthday-inDays').innerHTML = 'Your are ' + dateDiff() + ' days old.';
+    e.preventDefault();
+  });
+
+  // var str = '';
+
+  // // use something like document.write(str.padStart(i,"x") + "<br>");
+
+  let str = "";
+  let i = 0;
+  str = str.padStart(i, "x")
+  for (i = 0; i <= 20; i++) {
+    document.write(str.padStart(i, "x") + "<br>");
+  }
+
+
+
+</script>
+
+</body>
+
+</html>

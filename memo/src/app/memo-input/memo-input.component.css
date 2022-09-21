@@ -1,0 +1,6 @@
+.memo {
+  display: flex;
+  flex-direction: column;
+  font-family: "Courier New";
+  background-color: grey;
+}

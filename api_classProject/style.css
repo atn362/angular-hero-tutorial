@@ -1,0 +1,30 @@
+
+body{
+    background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+    background-size: cover;
+    font-family: 'Combo', cursive;
+}
+
+h1, h2{
+   text-align: center;
+    margin-top: 25px;
+    padding-bottom: 25px;
+}
+
+input, button {
+    margin: auto;
+    display: block;
+}
+
+button {
+    margin-top: 10px;
+    color: white;
+    background-color: blue;
+    border-radius: 35%;
+}
+
+#output, #output2, #output3, #output4, #output5, #output6, #output7 {
+    font-size: 24px;
+    margin-top: 50px;
+    text-align: center;
+}

@@ -1,0 +1,19 @@
+Goal:
+                Jane                 John
+                  v                   v
+    <-0___1___2___3___4___5___6___7___8___9___10>
+
+    Imagine Jane and John are hiking on a trail. At every mile on this trail there
+        as mile marker. Jane is standing at the third mile marker and John is standing
+        at the eighth. The user needs to know how many inches Jane is from John.
+
+Requirements:
+        1. The program must calculate and store the miles, feet, and inches
+            for the distance between Jane and John
+        2. The program must print the message...
+                "Jane is [x] inches from John!"
+                 (replace [x] with the calculated inches value)
+
+Hints:
+        - A mile is 5280 feet
+        - A foot is 12 inches.

@@ -1,0 +1,18 @@
+<div class="memo" xmlns="http://www.w3.org/1999/html">
+  <div class="memo-nav">
+  <div>{{memo.date  | date}}</div>
+  <label>
+    Finshed
+    <input [(ngModel)]="memo.finished" type="checkbox">
+  </label>
+  </div>
+  <p *ngIf='isUpdating === false 'class="memo-text">{{memo.text}}</p>
+  <p *ngIf='isUpdating === true 'class="memo-text">
+  <input [(ngModel)]="memo.text" />
+  </p>
+  <div class="memo-footer">
+  <button *ngIf="isUpdating === false"(click)="onDeleteClick()">Delete</button>
+  <button *ngIf="isUpdating === false" (click)="onUpdateClick()">Update</button>
+  <button *ngIf="isUpdating === true" (click)="onSaveClick()">Save</button>
+</div>
+</div>

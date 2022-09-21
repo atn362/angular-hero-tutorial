@@ -1,0 +1,22 @@
+1. JS overview
+    - JavaScript is a lightweight interpreted programming language
+        - does not generate a .exe or equivalent
+        - requires a "interpreter" program to run the code
+        - we will be using the web browser as our interpreter
+    - It's mostly used to add interactivity to websites
+    - open source
+    - cross platform
+
+2. JS Specifications
+    - Because its open source there are many "versions" of JS
+    - To make functionality more standardized across browsers an organization called ECMA International creates
+        a set of JS "rules" that interpreters should follow when executing JS files.
+    - All modern browsers support ES6
+        - excluding Internet Explorer (please do not use this....)
+
+3. JS keywords
+    - there are some words that are reserved for specific actions in JS
+        - these words are know as "key words" or "reserved words"
+        - keywords cannot be used for variable names
+    - List of key words
+        https://www.w3schools.com/js/js_reserved.asp

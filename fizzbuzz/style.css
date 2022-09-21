@@ -1,0 +1,18 @@
+body {
+    background-color: sandybrown;
+}
+
+h1 {
+    text-align: center;
+}
+
+.input_box {
+    margin-top: 50px;
+    margin-left: 40%;
+}
+
+#results {
+    margin-top: 20px;
+    margin-left: 45%;
+    font-weight: bold;
+}
