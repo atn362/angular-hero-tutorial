@@ -1,4 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {IMemo} from "../interfaces/IMemo";
 
 @Component({
   selector: 'app-memo',
@@ -7,13 +8,17 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 })
 export class MemoComponent implements OnInit {
 
-  @Input() memo: any;
-  @Output() onDelete = new EventEmitter<any>();
-  isUpdating: boolean = false;
+  @Input() memo!: IMemo;
 
-  constructor() { }
+  @Output() onDelete = new EventEmitter<IMemo>();
+  isUpdating: boolean = false;
+  localMemo! : IMemo;
+
+  constructor() {}
 
   ngOnInit(): void {
+    this.localMemo = {...this.memo};
+    console.log(this.localMemo);
   }
 
   onDeleteClick() {
@@ -24,11 +29,15 @@ export class MemoComponent implements OnInit {
 
   onUpdateClick() {
     this.isUpdating = true;
-    console.log('update')
   }
 
   onSaveClick() {
+    this.memo = {...this.localMemo}
     this.isUpdating = false;
-    console.log('save changes')
+  }
+
+  onCancelClick() {
+    this.localMemo = {...this.memo}
+    this.isUpdating = false;
   }
 }

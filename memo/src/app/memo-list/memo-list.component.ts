@@ -1,4 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {IMemo} from "../interfaces/IMemo";
 
 @Component({
   selector: 'app-memo-list',
@@ -7,8 +8,8 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 })
 export class MemoListComponent implements OnInit {
 
-  @Input() list!: any[];
-  @Output() onDelete = new EventEmitter<any>();
+  @Input() list!: IMemo[];
+  @Output() onDelete = new EventEmitter<IMemo>();
 
   constructor() {
 
@@ -17,7 +18,7 @@ export class MemoListComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onMemoDelete(memo: any) {
+  onMemoDelete(memo: IMemo) {
     this.onDelete.emit(memo);
 
   }

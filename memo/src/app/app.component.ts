@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import {IMemo} from "./interfaces/IMemo";
+
+
 
 @Component({
   selector: 'app-root',
@@ -8,20 +11,23 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'memo';
 
-  memoList: any[] = [];
+  memoList: IMemo[] = [];
 
   createMemo(input: string) {
     const currentDate = new Date();
-    const memo =  {id: currentDate, text: input, date: new Date(), finished: false}
+    const memo: IMemo =  {id: currentDate.getDate(), text: input, date: new Date(), finished: false}
+
     this.memoList.push(memo)
 
-
-console.log(this.memoList)
-
-
   }
-  deleteMemo(memoToDelete: any) {
+  deleteMemo(memoToDelete: IMemo) {
     this.memoList = this.memoList.filter(memo => memo.id !== memoToDelete.id)
   }
+
+  updateMemo() {
+
+  }
+
+
 
 }

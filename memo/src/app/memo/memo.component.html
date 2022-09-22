@@ -3,7 +3,7 @@
   <div>{{memo.date  | date}}</div>
   <label>
     Finshed
-    <input [(ngModel)]="memo.finished" type="checkbox">
+    <input [(ngModel)]="localMemo.finished" type="checkbox">
   </label>
   </div>
   <p *ngIf='isUpdating === false 'class="memo-text">{{memo.text}}</p>
@@ -15,6 +15,7 @@
   <button *ngIf="isUpdating === false"(click)="onDeleteClick()">Delete</button>
   <button *ngIf="isUpdating === false" (click)="onUpdateClick()">Update</button>
   <button *ngIf="isUpdating === true" (click)="onSaveClick()">Save</button>
+    <button *ngIf="isUpdating === true" (click)="onCancelClick()">Cancel</button>
 
-</div>
+  </div>
 </div>
