@@ -48,4 +48,10 @@ export class AppComponent {
     this.isLoggedIn = true;
 
   }
+
+  deleteContact(deleteContact: IContact) {
+
+  }
+
+
 }
