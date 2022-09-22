@@ -7,7 +7,7 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 })
 export class MemoInputComponent implements OnInit {
 
-  @Output() onSave =new EventEmitter<string>();
+  @Output() onSave = new EventEmitter<string>();
 
   constructor() { }
 

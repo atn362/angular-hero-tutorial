@@ -10,9 +10,11 @@
   <p *ngIf='isUpdating === true 'class="memo-text">
   <input [(ngModel)]="memo.text" />
   </p>
+
   <div class="memo-footer">
   <button *ngIf="isUpdating === false"(click)="onDeleteClick()">Delete</button>
   <button *ngIf="isUpdating === false" (click)="onUpdateClick()">Update</button>
   <button *ngIf="isUpdating === true" (click)="onSaveClick()">Save</button>
+
 </div>
 </div>

@@ -24,7 +24,4 @@ console.log(this.memoList)
     this.memoList = this.memoList.filter(memo => memo.id !== memoToDelete.id)
   }
 
-  debug() {
-    console.log(this.memoList)
-  }
-  }
+}
