@@ -43,7 +43,7 @@ export class AppComponent {
 
   debug() {
     console.log(this.memoList)
-  }
+  }s
 
 
 

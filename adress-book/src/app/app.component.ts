@@ -34,11 +34,14 @@ export class AppComponent {
       email: "atn362@" }
   ]
 
+
+
   onLogin(loginCreds: IAccount) {
     const foundAccount = this.accountList.find((account) => {
      return account.username === loginCreds.username
       && account.password === loginCreds.password
     });
+
 
     if (foundAccount === undefined){
       console.log('invalid account')

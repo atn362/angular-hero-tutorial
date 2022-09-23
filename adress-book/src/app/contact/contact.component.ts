@@ -1,5 +1,6 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {IContact} from "../interfaces/IContact";
+
 
 @Component({
   selector: 'app-contact',
@@ -9,11 +10,16 @@ import {IContact} from "../interfaces/IContact";
 export class ContactComponent implements OnInit {
 
   @Input() contact!: IContact;
+  // @Output onDelete = new EventEmitter<IContact>;
 
   constructor() { }
 
   ngOnInit(): void {
 
+  }
+
+  onDeleteClick() {
+    console.log('click delete')
   }
 
 }
