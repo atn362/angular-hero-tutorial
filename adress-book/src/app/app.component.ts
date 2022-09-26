@@ -11,7 +11,7 @@ import {IContact} from "./interfaces/IContact";
 })
 export class AppComponent {
 
-  isLoggedIn : boolean = true;
+  isLoggedIn : boolean = false;
   accountList: IAccount[] = [
     {username: 'admin', password: 'admin'}
   ]

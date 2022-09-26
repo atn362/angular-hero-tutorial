@@ -46,5 +46,8 @@ export class AppComponent {
   }s
 
 
+  deleteMemo($event: IMemo) {
+    this.memoList
 
+  }
 }
