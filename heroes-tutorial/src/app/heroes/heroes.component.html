@@ -11,6 +11,8 @@
 <div *ngIf="selectedHero">
   <h2>{{selectedHero.name | uppercase}} Details</h2>
   <div>id: {{selectedHero.id}}</div>
+  <span class="powers">powers: {{selectedHero.powers}}</span>
+
   <div>
     <label for="hero-name">Hero name: </label>
     <input id="hero-name" [(ngModel)]="selectedHero.name" placeholder="name">
