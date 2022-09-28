@@ -1,15 +1,13 @@
 import { Injectable } from '@angular/core';
+import {IProfile} from "./interfaces/IProfile";
+import {IDay} from "./interfaces/IDay";
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
 
-  profile = {
-    name: 'alex',
-    weight_lbs: 200,
-    activity_level: "average"
-  }
 
-  constructor() { }
+  constructor() {
+  }
 }
