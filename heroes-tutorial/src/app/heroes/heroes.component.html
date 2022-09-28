@@ -8,9 +8,10 @@
     </button>
   </li>
 </ul>
-<div *ngIf="selectedHero">
-  <h2>{{selectedHero.name | uppercase}} Details</h2>
-  <div>id: {{selectedHero.id}}</div>
+
+<div class="card" *ngIf="selectedHero">
+  <h2 class="card-body">{{selectedHero.name | uppercase}} Details</h2>
+  <div class="card-body" >id: {{selectedHero.id}}</div>
   <span class="powers">powers: {{selectedHero.powers}}</span>
 
   <div>
