@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { DAY } from '../enums/DAY'
 @Component({
   selector: 'app-week',
   templateUrl: './week.component.html',
